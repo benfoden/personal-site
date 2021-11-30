@@ -1,6 +1,6 @@
-import { useEffect, useState, useCallback, useRef } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react'
 import styles from './Animation.module.scss'
-import { Scene, Vector3, WebGLRenderer, sRGBEncoding, OrthographicCamera, AmbientLight, PerspectiveCamera } from 'three';
+import { Scene, Vector3, WebGLRenderer, sRGBEncoding, OrthographicCamera, AmbientLight, PerspectiveCamera } from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '@/lib/model'
 
@@ -14,11 +14,7 @@ const Animation = () => {
   const [renderer, setRenderer] = useState<WebGLRenderer>()
   const [_camera, setCamera] = useState<PerspectiveCamera>()
   const [_controls, setControls] = useState<OrbitControls>()
-  const [initialCameraPosition] = useState(new Vector3(
-    20 * Math.sin(0.1 * Math.PI),
-    10,
-    5 * Math.cos(0.1 * Math.PI)
-  ))
+  const [initialCameraPosition] = useState(new Vector3(20 * Math.sin(0.1 * Math.PI), 10, 5 * Math.cos(0.1 * Math.PI)))
   const [scene] = useState(new Scene())
 
   const handleWindowResize = useCallback(() => {
@@ -38,7 +34,7 @@ const Animation = () => {
       const scW = current.clientWidth
       const renderer = new WebGLRenderer({
         antialias: true,
-        alpha: true
+        alpha: true,
       })
       renderer.setPixelRatio(window.devicePixelRatio)
       renderer.setSize(scH, scW)
@@ -46,7 +42,7 @@ const Animation = () => {
       current.appendChild(renderer.domElement)
       setRenderer(renderer)
 
-      const camera = new PerspectiveCamera(45, scW / scH, 1, 1000);
+      const camera = new PerspectiveCamera(45, scW / scH, 1, 1000)
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
       setCamera(camera)
@@ -61,11 +57,10 @@ const Animation = () => {
 
       loadGLTFModel(scene, '/neptune.glb', {
         receiveShadow: false,
-        castShadow: false
+        castShadow: false,
       }).then(() => {
         animate()
       })
-
 
       let req = null
       let frame = 0
@@ -79,10 +74,8 @@ const Animation = () => {
           const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
 
           camera.position.y = 10
-          camera.position.x =
-            p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
-          camera.position.z =
-            p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed)
+          camera.position.x = p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
+          camera.position.z = p.z * Math.cos(rotSpeed) - p.x * Math.sin(rotSpeed)
           camera.lookAt(target)
         } else {
           controls.update()

@@ -2,13 +2,15 @@ import type { GetStaticProps, NextPage } from 'next'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import styles from '@/styles/Home.module.scss'
-import Header from '@/components/Header'
 import About from '@/components/About'
 import RecentPosts from '@/components/RecentPosts'
-const Animation = dynamic(() => import('@/components/Animation'), { ssr: false })
-
+import Spinner from '@/components/Spinner'
 import { allPosts } from '.contentlayer/data'
 import { PostProps } from '@/lib/types'
+const Animation = dynamic(() => import('@/components/Animation'), {
+  ssr: false,
+  loading: () => <Spinner />,
+})
 
 const Home: NextPage<PostProps> = ({ posts }) => {
   return (

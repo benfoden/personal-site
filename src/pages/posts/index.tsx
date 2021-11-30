@@ -40,7 +40,8 @@ const Blog: NextPage<PostProps> = ({ posts }) => {
                     <p>{post.subtitle}</p>
                     <div className={styles.infoWrapper}>
                       {!!post.avatar && <Image src={post.avatar} alt={`Foto de ${post.author}`} height="30" width="30" />}
-                      <label>{post.author}</label><label>{post.publishedAt} </label>
+                      <label>{post.author}</label>
+                      <label>{post.publishedAt} </label>
                     </div>
                   </a>
                 </Link>

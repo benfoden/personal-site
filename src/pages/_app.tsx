@@ -5,7 +5,7 @@ import styles from '@/styles/Home.module.scss'
 import Footer from '@/components/Footer'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className={styles.container} >
+    <div className={styles.container}>
       <Header />
       <Component {...pageProps} />
       <Footer />
