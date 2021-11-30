@@ -1,9 +1,15 @@
 import styles from './Header.module.scss'
 import ActiveLink from '../ActiveLink'
 import { RiGithubFill } from 'react-icons/ri'
+import Link from 'next/link'
+
 const Header = () => (
   <div className={styles.container}>
-    <h2>doug.dev</h2>
+    <Link href="/">
+      <a>
+        <h2>doug.dev</h2>
+      </a>
+    </Link>
     <nav>
       <ActiveLink activeClassName={styles.active} href="/">
         <a>Home</a>

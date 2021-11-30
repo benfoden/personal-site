@@ -2,7 +2,7 @@ import type { GetStaticProps, NextPage } from 'next'
 import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
-import styles from '@/styles/Home.module.scss'
+import styles from '@/styles/Posts.module.scss'
 import { allPosts } from '.contentlayer/data'
 
 type Post = {
@@ -28,7 +28,7 @@ const Blog: NextPage<PostProps> = ({ posts }) => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main className={styles.main}>
-        <h1>Blog </h1>
+        <h1>Posts </h1>
         <ul>
           {posts.map((post) => {
             return (
@@ -40,7 +40,7 @@ const Blog: NextPage<PostProps> = ({ posts }) => {
                     <p>{post.subtitle}</p>
                     <div className={styles.infoWrapper}>
                       {!!post.avatar && <Image src={post.avatar} alt={`Foto de ${post.author}`} height="30" width="30" />}
-                      <label>{post.author}</label> ·<label>{post.publishedAt} </label>
+                      <label>{post.author}</label><label>{post.publishedAt} </label>
                     </div>
                   </a>
                 </Link>

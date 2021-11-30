@@ -12,6 +12,10 @@
     display: flex;
     flex-direction: column;
 
+    h2 {
+      margin-top: 10px;
+    }
+
     p,
     small {
       margin-top: 0.6rem;
@@ -39,4 +43,22 @@
   }
 }
 
- 
+.infoWrapper {
+  display: flex;
+  align-items: center; 
+  margin-top: 20px;
+
+  img {
+    border-radius: 100px;
+  } 
+
+  label {
+    margin-left: 5px;
+    font-weight: bold;
+  }
+
+  label + label {
+    margin-left: auto;
+    font-weight: 500;
+  }
+}

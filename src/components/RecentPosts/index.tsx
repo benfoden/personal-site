@@ -18,6 +18,11 @@ const RecentPosts = ({ posts }: PostProps) => (
         </li>
       ))}
     </ul>
+    <Link href="/posts">
+      <a>
+        <h2>See more</h2>
+      </a>
+    </Link>
   </div>
 )
 
