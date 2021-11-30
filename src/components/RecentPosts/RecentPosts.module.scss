@@ -1,0 +1,39 @@
+.container {
+  margin-top: 2rem;
+  width: 650px;
+
+  ul {
+    margin-top: 2rem;
+    list-style-type: none;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+
+    p,
+    small {
+      margin-top: 0.6rem;
+    }
+
+    small {
+      color: #ffffff90;
+    }
+
+    padding-bottom: 0.9rem;
+    border: 1px solid #ffffff90;
+    border-radius: 10px;
+    padding: 20px;
+
+    transition: filter 0.2s;
+  }
+
+  li + li {
+    margin-top: 1rem;
+  }
+
+  li:hover {
+    cursor: pointer;
+    filter: brightness(0.8);
+  }
+}
