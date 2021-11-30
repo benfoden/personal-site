@@ -14,7 +14,7 @@ const Home: NextPage<PostProps> = ({ posts }) => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Next JS blog with MDX</title>
+        <title>Douglas Henrique - Developer, creator, writer </title>
         <meta name="description" content="Next js Blog using MDX files" />
         <link rel="icon" href="/favicon.png" />
       </Head>
