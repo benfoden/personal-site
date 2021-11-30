@@ -12,19 +12,18 @@ import { PostProps } from '@/lib/types'
 
 const Home: NextPage<PostProps> = ({ posts }) => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Douglas Henrique - Developer, creator, writer </title>
         <meta name="description" content="Next js Blog using MDX files" />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <main className={styles.main}>
-        <Header />
         <Animation />
         <About />
         <RecentPosts posts={posts} />
       </main>
-    </div>
+    </>
   )
 }
 

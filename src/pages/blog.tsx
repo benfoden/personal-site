@@ -19,7 +19,7 @@ interface PostProps {
   posts: Post[]
 }
 
-const Home: NextPage<PostProps> = ({ posts }) => {
+const Blog: NextPage<PostProps> = ({ posts }) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -69,4 +69,4 @@ export const getStaticProps: GetStaticProps = async () => {
   return { props: { posts } }
 }
 
-export default Home
+export default Blog
