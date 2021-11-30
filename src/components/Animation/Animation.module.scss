@@ -1,1 +1,15 @@
-.container{}
+.container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;  
+}
+
+.model {
+  height: 400px;
+  width: 400px;
+
+  :hover {
+    cursor: pointer;
+  }
+}

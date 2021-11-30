@@ -17,7 +17,7 @@ const Animation = () => {
   const [initialCameraPosition] = useState(new Vector3(
     20 * Math.sin(0.1 * Math.PI),
     10,
-    0.1 * Math.cos(0.1 * Math.PI)
+    5 * Math.cos(0.1 * Math.PI)
   ))
   const [scene] = useState(new Scene())
 
@@ -51,7 +51,7 @@ const Animation = () => {
       camera.lookAt(target)
       setCamera(camera)
 
-      const ambientLight = new AmbientLight(0xcccccc, 1)
+      const ambientLight = new AmbientLight(0xcccccc, 5)
       scene.add(ambientLight)
 
       const controls = new OrbitControls(camera, renderer.domElement)
@@ -101,7 +101,10 @@ const Animation = () => {
   }, [renderer, handleWindowResize])
 
   return (
-    <div ref={refContainer} style={{ border:'1px solid #fff', height: 400, width: 400 }}></div>
+    <div className={styles.container}>
+      <div ref={refContainer} className={styles.model}></div>
+      <h1>Always keep it simple.</h1>
+    </div>
   )
 }
 
