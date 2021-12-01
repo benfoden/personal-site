@@ -19,8 +19,8 @@ async function generate() {
         ${pages
           .map((page) => {
             const path = page
-              .replace('pages', '')
-              .replace('data', '')
+              .replace('src/pages', '')
+              .replace('src/data', '')
               .replace('.tsx', '')
               .replace('.mdx', '');
             const route = path === '/index' ? '' : path;
