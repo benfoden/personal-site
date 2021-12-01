@@ -7,9 +7,9 @@ import styles from './styles.module.scss'
 export default function LayoutPost({ children, post }: PropsWithChildren<{ post: Post }>) {
   return (
     <Container
-      title={`${post.title} – ${post.author}`}
+      title={`${post.title} | ${post.author}`}
       description={post.summary}
-      image={`<https://your-url>${post.banner}`}
+      image={`<https://www.dougdev.com.br${post.banner}`}
       date={post.publishedAt}
       type="article"
     >

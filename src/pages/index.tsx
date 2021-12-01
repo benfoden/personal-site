@@ -17,7 +17,7 @@ const Home: NextPage<PostProps> = ({ posts }) => {
   return (
     <main>
       <Head>
-        <title>Douglas Henrique - Developer, creator, writer </title>
+        <title>Home | Douglas Henrique</title>
         <meta name="description" content="Next js Blog using MDX files" />
         <link rel="icon" href="/favicon.png" />
       </Head>

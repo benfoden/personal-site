@@ -5,6 +5,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from '@/styles/Posts.module.scss'
 import { allPosts } from '.contentlayer/data'
+import { useRouter } from 'next/router'
+import Container from '@/components/Container'
 
 type Post = {
   title: string
@@ -21,6 +23,8 @@ interface PostProps {
 }
 
 const Blog: NextPage<PostProps> = ({ posts }) => {
+  const router = useRouter()
+
   const renderPosts = useCallback(() => {
     if (posts.length > 0) {
       return (
@@ -51,15 +55,13 @@ const Blog: NextPage<PostProps> = ({ posts }) => {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Next JS blog with MDX</title>
-        <meta name="description" content="Next js Blog using MDX files" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-      <main className={styles.main}>
+      <Container
+        title="Posts | Douglas Henrique"
+        description="Douglas Henrique | Tech manager, desenvolvedor e criador de conteúdo."
+      >
         <h1>Posts </h1>
         {renderPosts()}
-      </main>
+      </Container>
     </div>
   )
 }
