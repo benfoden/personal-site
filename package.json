@@ -10,13 +10,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "NODE_OPTIONS='--experimental-json-modules' node ./scripts/src/generate-rss.mjs && node ./scripts/src/generate-sitemap.mjs",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
     "format": "prettier \"./src/**/*.{ts,tsx}\" --write",
     "eslint:check": "eslint  --ext .ts,.tsx src/ --fix",
-    "generate": "yarn plop --plopfile ./generators/plopfile.js",
-    "postbuild": "NODE_OPTIONS='--experimental-json-modules' node ./scripts/generate-rss.mjs && node ./scripts/generate-sitemap.mjs"
+    "generate": "yarn plop --plopfile ./generators/plopfile.js"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
