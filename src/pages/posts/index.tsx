@@ -1,3 +1,4 @@
+import { useCallback } from 'react'
 import type { GetStaticProps, NextPage } from 'next'
 import Image from 'next/image'
 import Head from 'next/head'
@@ -20,15 +21,9 @@ interface PostProps {
 }
 
 const Blog: NextPage<PostProps> = ({ posts }) => {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Next JS blog with MDX</title>
-        <meta name="description" content="Next js Blog using MDX files" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-      <main className={styles.main}>
-        <h1>Posts </h1>
+  const renderPosts = useCallback(() => {
+    if (posts.length > 0) {
+      return (
         <ul>
           {posts.map((post) => {
             return (
@@ -49,6 +44,21 @@ const Blog: NextPage<PostProps> = ({ posts }) => {
             )
           })}
         </ul>
+      )
+    }
+    return <p> Sem posts por enquanto :( </p>
+  }, [posts])
+
+  return (
+    <div className={styles.container}>
+      <Head>
+        <title>Next JS blog with MDX</title>
+        <meta name="description" content="Next js Blog using MDX files" />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      <main className={styles.main}>
+        <h1>Posts </h1>
+        {renderPosts()}
       </main>
     </div>
   )
