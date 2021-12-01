@@ -37,6 +37,7 @@ Blog boilerplate using Next.js 12, MDX files, contentlayer and more
 - Content Layer
 - Remark
 - Rehype
+- Three JS 
 
 <a name="overview">
   <h1>Overview</h1>
