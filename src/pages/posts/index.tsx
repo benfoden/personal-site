@@ -22,8 +22,6 @@ interface PostProps {
 }
 
 const Blog: NextPage<PostProps> = ({ posts }) => {
-  const router = useRouter()
-
   const renderPosts = useCallback(() => {
     if (posts.length > 0) {
       return (

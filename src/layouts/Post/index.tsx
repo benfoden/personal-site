@@ -9,7 +9,7 @@ export default function LayoutPost({ children, post }: PropsWithChildren<{ post:
     <Container
       title={`${post.title} | ${post.author}`}
       description={post.summary}
-      image={`<https://www.dougdev.com.br${post.banner}`}
+      image={post.banner ? `https://www.dougdev.com.br/images/${post.banner}` : ``}
       date={post.publishedAt}
       type="article"
     >
