@@ -7,7 +7,8 @@ module.exports = withContentlayer()({
   images: {
     domains: [
       'avatars.githubusercontent.com', // Spotify Album Art,
-      'localhost'
+      'localhost',
+      'www.dougdev.com.br'
     ]
   },
 })
