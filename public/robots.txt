@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://www.dougdev.com.br/sitemap.xml
