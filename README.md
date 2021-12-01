@@ -1,8 +1,8 @@
 <a name="read-me-template" />
 
-# Next.js 12 MDX Blog complete boilerplate [UNDER CONSTRUCTION]
+# Douglas Henrique - Personal Website
 
-> This is a readme from next.js 12 Blog complete boilerplate.
+> This is my personal site readme, i hope you enjoy it
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/9868584/143581770-3d23227d-214c-4c96-8762-acb62788ad2f.png" width="200" alt="Doug Pen" /> 
@@ -13,7 +13,6 @@ Just to make your dev experience more simple :)
 
 - [Description](#description)
 - [Overview](#overview)
-- [Screenshots](#screenshots)
 - [How To Use](#how-to-use)
 - [License](#license)
 - [About me](#about-me)
@@ -43,21 +42,13 @@ Blog boilerplate using Next.js 12, MDX files, contentlayer and more
   <h1>Overview</h1>
 </a>
 
-- `data/*` - MDX data that is used to show your blog posts
-- `layouts/*` - Here you can set different page layouts each MDX category
-- `lib/*` - Path with helpful utilities or code for external services
-- `pages/posts/*` - Static pre-rendered posts using MDX
+- `src/data/*` - MDX data that is used to show your blog posts
+- `src/layouts/*` - Here you can set different page layouts each MDX category
+- `src/lib/*` - Path with helpful utilities or code for external services
+- `src/pages/posts/*` - Static pre-rendered posts using MDX
 - `pages/*` - All other project pages
+- `src/styles/*` - Global styles and other styles 
 - `public/*` - Static assets (fonts, images, etc)
-- `styles/*` - Global styles and other styles 
-
-<a name="screenshots">
-  <h1>Screenshots</h1>
-</a>
-Blog boilerplate using Next.js 12, MDX files, contentlayer and more
-<img width="1439" alt="Screen Shot 2021-11-29 at 20 01 50" src="https://user-images.githubusercontent.com/9868584/143956600-fa1d21a9-6e4d-4b62-a4ca-cf2095f6e6b6.png">
-
-<img width="1440" alt="Screen Shot 2021-11-29 at 20 02 11" src="https://user-images.githubusercontent.com/9868584/143956605-5c353f56-4e6a-4b03-a2d6-746b981fe221.png">
 
 <a name="how-to-use">
   <h1>How To Use </h1>
