@@ -11,10 +11,10 @@ const Header = () => (
       </a>
     </Link>
     <nav>
-      <ActiveLink activeClassName={styles.active} href="/">
+      <ActiveLink activeClassName={styles.active} shouldMatchExactHref href="/" passHref>
         <a>Home</a>
       </ActiveLink>
-      <ActiveLink activeClassName={styles.active} href="/posts">
+      <ActiveLink activeClassName={styles.active} href="/posts" passHref>
         <a>Posts</a>
       </ActiveLink>
       <ActiveLink href="https://github.com/douglas-henrique/personal-site">
