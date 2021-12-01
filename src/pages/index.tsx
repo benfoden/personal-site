@@ -7,6 +7,7 @@ import RecentPosts from '@/components/RecentPosts'
 import Spinner from '@/components/Spinner'
 import { allPosts } from '.contentlayer/data'
 import { PostProps } from '@/lib/types'
+
 const Animation = dynamic(() => import('@/components/Animation'), {
   ssr: false,
   loading: () => <Spinner />,
@@ -14,18 +15,16 @@ const Animation = dynamic(() => import('@/components/Animation'), {
 
 const Home: NextPage<PostProps> = ({ posts }) => {
   return (
-    <>
+    <main>
       <Head>
         <title>Douglas Henrique - Developer, creator, writer </title>
         <meta name="description" content="Next js Blog using MDX files" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <main className={styles.main}>
-        <Animation />
-        <About />
-        <RecentPosts posts={posts} />
-      </main>
-    </>
+      <Animation />
+      <About />
+      <RecentPosts posts={posts} />
+    </main>
   )
 }
 

@@ -19,7 +19,7 @@ const Header = () => (
       </ActiveLink>
       <ActiveLink href="https://github.com/douglas-henrique/personal-site">
         <a target="_blank">
-          <RiGithubFill size={15} /> GitHub
+          <RiGithubFill className={styles.gitIcon} /> <label>GitHub</label>
         </a>
       </ActiveLink>
     </nav>

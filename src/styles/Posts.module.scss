@@ -41,16 +41,25 @@
     cursor: pointer;
     filter: brightness(0.8);
   }
+
+  @media (max-width: 640px) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin-top: 0.1rem;
+  }
 }
 
 .infoWrapper {
   display: flex;
-  align-items: center; 
+  align-items: center;
   margin-top: 20px;
 
   img {
     border-radius: 100px;
-  } 
+  }
 
   label {
     margin-left: 5px;
