@@ -6,7 +6,8 @@ module.exports = withContentlayer()({
   reactStrictMode: true,
   images: {
     domains: [
-      'avatars.githubusercontent.com', // Spotify Album Art
+      'avatars.githubusercontent.com', // Spotify Album Art,
+      'localhost'
     ]
   },
 })

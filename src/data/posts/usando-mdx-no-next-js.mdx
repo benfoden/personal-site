@@ -1,0 +1,48 @@
+---
+title: 'Remix JS'
+publishedAt: '01 de dezembro de 2021'
+summary: 'Dia 22 de novembro o time por trás do React-router lançou o Remix.js - uma alternativa para construção de full-stack apps e com um foco forte em SSR.'
+avatar: 'https://avatars.githubusercontent.com/u/9868584?v=4'
+author: 'Douglas Henrique'
+banner: 'remix.jpeg'
+subtitle: 'Uma boa alternativa ao NextJS quando o assunto é SSR.'
+---
+
+Dia 22 de novembro o time por trás do React-router lançou o Remix.js - uma alternativa para construção de full-stack apps e com um foco forte em SSR.
+
+<p>
+  <a href="http://localhost:3000/images/remix.jpeg">
+    <Image
+      alt={`Screenshot do tweet sobre Remix`}
+      src={`http://localhost:3000/images/remix.jpeg`}
+      width="800"
+      height={500}
+      priority
+    />
+  </a>
+</p>
+
+## Minha opinião
+
+<p>
+  Acho que é uma alternativa ao Next.js quando o assunto é SSR, permite você trabalhar diretamente com ferramentas como express
+  e você não necessariamente precisaria trabalhar com node.js, ele aceita outros como deno.js e etc.
+</p>
+
+<p>
+ Também gostei da parte onde importamos um component "Outlet" e de acordo com a rota ele altera um child component, isso é legal por exemplo para fazer fluxos contínuos onde somente uma section da pagina muda sem ter que fazer um milhão de cases, ifs ou object literals (melhora a leitura do código na minha opinião).
+</p>
+
+<p>
+  Sobre SSR no remix.js - temos um método loader que é semelhante ao getServerSideProps do next.js, no qual você retorna algo do
+  lado do servidor e depois do você pode usar um hook chamado useLoaderData() pra pegar as informações. Não é algo que me faria
+  trocar o next.js mas achei prático a criação de um hook pra receber as informações.
+</p>
+
+<p> 
+Mas uma parada que eu gostei muito do remix.js é sobre não ter que usar event.preventDefault() quando você manda um submit do form. Ele te dá um component "Form" que quando você envia as informações recebe do lado do servidor por um método action e faz toda a parte de tratamento e inserção em banco de dados (se você estiver usando um). Nesse meio tempo em que o request está passando pela lógica do lado do servidor, ele te dá um hook useTransaction que é o estado da requisição e assim você conseguir mostrar pro usuário um loading sinalizando que algo está sendo carregado/processado.
+</p>
+
+<p>
+  Acho que vale a pena dar uma olhada na <a href="https://remix.run/docs/en/v1">documentação</a> 🚀
+</p>
