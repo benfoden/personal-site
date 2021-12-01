@@ -1,7 +1,6 @@
 import { useCallback } from 'react'
 import type { GetStaticProps, NextPage } from 'next'
 import Image from 'next/image'
-import Head from 'next/head'
 import Link from 'next/link'
 import styles from '@/styles/Posts.module.scss'
 import { allPosts } from '.contentlayer/data'
