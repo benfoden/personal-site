@@ -1,4 +1,5 @@
 import { useMDXComponent } from 'next-contentlayer/hooks'
+import Components from '@/components/MDXComponents'
 import { allPosts } from '.contentlayer/data'
 import type { Post } from '.contentlayer/types'
 import { GetStaticPaths, GetStaticProps } from 'next'
@@ -8,7 +9,13 @@ export default function Post({ post }: { post: Post }) {
   const Component = useMDXComponent(post.body.code)
   return (
     <LayoutPost post={post}>
-      <Component />
+      <Component
+        components={
+          {
+            ...Components,
+          } as any
+        }
+      />
     </LayoutPost>
   )
 }
