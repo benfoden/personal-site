@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '@/styles/Posts.module.scss'
 import { allPosts } from '.contentlayer/data'
-import { useRouter } from 'next/router'
 import Container from '@/components/Container'
 
 type Post = {

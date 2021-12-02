@@ -10,7 +10,12 @@ const About = () => (
       <label>8 anos contruindo lindas aplicações para o mundo web e mobile ✨ </label>
     </div>
     <div>
-      <Image src="https://avatars.githubusercontent.com/u/9868584?v=4" alt={`Foto de Douglas Henrique`} height="150" width="150" />
+      <Image
+        src={`https://avatars.githubusercontent.com/u/9868584?v=4`}
+        alt={`Foto de Douglas Henrique`}
+        height="150"
+        width="150"
+      />
     </div>
   </div>
 )

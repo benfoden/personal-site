@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Douglas Henrique]]></title>
+        <description><![CDATA[Douglas Henrique]]></description>
+        <link>https://www.dougdev.com.br/</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Thu, 02 Dec 2021 15:00:38 GMT</lastBuildDate>
+        <atom:link href="https://www.dougdev.com.br/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Remix JS]]></title>
+            <description><![CDATA[Dia 22 de novembro o time por trás do React-router lançou o Remix.js - uma alternativa para construção de full-stack apps e com um foco forte em SSR.]]></description>
+            <link>https://www.dougdev.com.br/posts/remix-js</link>
+            <guid isPermaLink="true">https://www.dougdev.com.br/posts/remix-js</guid>
+            <pubDate>Invalid Date</pubDate>
+        </item>
+    </channel>
+</rss>

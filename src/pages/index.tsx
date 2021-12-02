@@ -1,7 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
-import styles from '@/styles/Home.module.scss'
 import About from '@/components/About'
 import RecentPosts from '@/components/RecentPosts'
 import Spinner from '@/components/Spinner'

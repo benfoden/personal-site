@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback, useRef } from 'react'
 import styles from './Animation.module.scss'
-import { Scene, Vector3, WebGLRenderer, sRGBEncoding, OrthographicCamera, AmbientLight, PerspectiveCamera } from 'three'
+import { Scene, Vector3, WebGLRenderer, sRGBEncoding, AmbientLight, PerspectiveCamera } from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '@/lib/model'
 
@@ -84,6 +84,7 @@ const Animation = () => {
         renderer.render(scene, camera)
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
