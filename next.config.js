@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const { withContentlayer } = require('next-contentlayer')
 module.exports = withContentlayer()({
-  swcMinify: true,
+  // swcMinify: true,
   // Your Next.js config...
   reactStrictMode: true,
   images: {
