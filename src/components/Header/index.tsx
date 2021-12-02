@@ -18,7 +18,7 @@ const Header = () => (
         <a>Posts</a>
       </ActiveLink>
       <ActiveLink href="https://github.com/douglas-henrique/personal-site">
-        <a target="_blank" rel="noreferrer">
+        <a target="_blank" rel="noreferrer" aria-label="GitHub">
           <RiGithubFill className={styles.gitIcon} /> <label>GitHub</label>
         </a>
       </ActiveLink>
