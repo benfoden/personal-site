@@ -41,3 +41,8 @@ yarn.lock
 
 # Contentlayer
 .contentlayer
+
+# Public
+public/sitemap.xml
+public/feed.xml
+.vercel
