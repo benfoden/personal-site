@@ -7,7 +7,7 @@ const About = () => (
       <h1>Douglas Henrique</h1>
       <p>Tech Lead at Provi</p>
 
-      <label>8 anos contruindo lindas aplicações para o mundo web e mobile ✨ </label>
+      <label>8 anos construindo lindas aplicações para o mundo web e mobile ✨ </label>
     </div>
     <div>
       <Image
